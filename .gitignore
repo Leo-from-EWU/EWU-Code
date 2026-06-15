@@ -1,0 +1,14 @@
+# GitHub Repository URL: https://github.com/Leo-from-EWU/EWU-Code
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Compiled C programs
+*.out
+*.o
+*.exe
+*.dSYM/
