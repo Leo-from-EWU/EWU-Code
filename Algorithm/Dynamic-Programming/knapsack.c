@@ -67,6 +67,7 @@ int main(){
     }
     profit=profit+ n;
     printf("Total Profit: %d",profit);
+    
 
     
 }
