@@ -22,7 +22,7 @@ int main(){
             }
             }
         s= s-(temp*count);
-        printf("Coins of %d used %d times,remaining: %2f\n ",temp,count,s);
+        printf("Coins of %d used %d times,remaining: %.2f\n ",temp,count,s);
         
         
     }
