@@ -63,7 +63,7 @@ int main()
         }
 
         if (selected_index == -1)   // FIX: no items left -> stop
-            break;
+            break; // best case for stopping the loop when alrady filled.
 
         remaining_weight = total_weight - small_weight;   // space left in the jar
 
