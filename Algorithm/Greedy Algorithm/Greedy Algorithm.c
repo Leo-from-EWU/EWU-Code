@@ -15,7 +15,7 @@ int main(){
         if(temp<s){
             int j=1;
             
-            while(temp * j<s){
+            while((temp * j)<s){
                 count++;
                 j++;
                 recount++;
