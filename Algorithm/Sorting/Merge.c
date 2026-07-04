@@ -7,15 +7,21 @@ void merge(int arr[],int lb,int mid,int ub);
 
 int main(){
     
-    int arr[]= {15,5,24,8,1,3,16,10,20};
-    int lb=0;
-    int ub=8;
+    int size;
+    printf("Enter the size of the Array: ");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter the elements of the Array: \n");
+    for(int i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
 
-    my_mergesort(arr,lb,ub);
-
-    printf("Sorted array: ");
-    for(int i = 0; i <= ub; i++) {
-        printf("%d\n", arr[i]);
+    my_mergesort(arr,0,size-1);
+    
+    printf("Merged Array : \n" );
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d\n",arr[i]);
     }
     
 
