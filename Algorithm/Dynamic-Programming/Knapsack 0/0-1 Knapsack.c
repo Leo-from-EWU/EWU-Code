@@ -35,7 +35,7 @@ int main(){
         }
     }
 
-    // Array to track which items are taken
+    // Array to track which items are taken we gave {0,0,0,0}
     int arr[rows];
     for (int k = 0; k < rows; k++) 
     arr[k] = 0;
@@ -67,9 +67,12 @@ int main(){
     printf("  Total weight   : %d / %d\n", total_weight, capacity);
     printf("  Total profit   : %d\n", total_value);
     printf("============================================\n");
-
-
+    
     }
+    
+
+
+    
 
 
 

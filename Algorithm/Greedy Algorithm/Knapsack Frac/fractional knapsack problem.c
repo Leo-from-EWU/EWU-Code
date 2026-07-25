@@ -33,7 +33,7 @@ int main() {
 
         // x_i <- min{w_i, W - w}
         int take;
-        if (weight[idx] < W - w)
+        if (weight[idx] < W - w) //1< 10-1
             take = weight[idx];
         else
             take = W - w;
