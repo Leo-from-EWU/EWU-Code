@@ -1,27 +1,53 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-void activity_selector(int start[], int finish[], int n) {
-int temp=0;
-int count=1;
+void activity(int start[], int finish[], int n)
+{
+    int temp = 0;
+    int tt;
+    int count = 0;
 
-for(int i=0;i<n;i++){
-    if(start[i]>= finish[temp]){
-        count++;
-        temp=i;
-        printf("The %d activity will start from %d, and end at %d\n",count,start[i],finish[temp]);
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(finish[j]>finish[j+1]){
+                tt= finish[j];
+                finish[j]=finish[j+1];
+                finish[j+1]=tt;
+
+                tt=start[j];
+                start[j]=start[j+1];
+                start[j+1]=tt;
+            }
+        }
     }
-}
-printf("Max: %d",count);
-}
-int main() {
+    printf("The activity will start from %d to %d\n", start[0], finish[0]);
 
-  int start[] = {10,12,20};
-  int finish[] = {20,25,30};
+    for (int i = 0; i < n; i++)
+    {
+        if (start[i] >= finish[temp])
+        {
+            temp = i;
+            count++;
 
-  int n = sizeof(start) / sizeof(start[0]);
-  printf("The 1 activity will start from: %d, and end at %d\n",start[0],finish[0]);
-  // %d\n",start[0],finish[0]);
-  activity_selector(start, finish, n);
-  return 0;
+            printf("The activity will start from %d to %d\n ", start[i], finish[i]);
+        }
+    }
+    printf("%d : Max", count+1);
+}
+int main()
+{
+    int n;
+    printf("Enter the activity number: \n");
+    scanf("%d", &n);
+
+    int start[n];
+    int finish[n];
+
+    printf("Enter the activities starting & ending: (s,f) \n");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d %d", &start[i], &finish[i]);
+    }
+
+    
+    activity(start, finish, n);
 }
