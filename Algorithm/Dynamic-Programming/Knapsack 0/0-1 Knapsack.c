@@ -14,7 +14,6 @@ int main(){
     int rows= sizeof(weight)/sizeof(weight[0]);
     int colums= capacity+1;
 
-    // dp[i][w] stores max value for i items up to capacity w
     int dp[rows][colums];
 
     for(int i=0;i<rows;i++){
@@ -23,11 +22,9 @@ int main(){
             dp[i][w]=0;
 
             else if(weight[i]>w){
-                // Exclude item i if too heavy: e.g., dp[1][1] = dp[0][1]
                 dp[i][w]=dp[i-1][w];
             }
             else{
-                // Include item i: e.g., dp[1][3] = max(12+dp[0][1], dp[0][3])
                 int include= value[i]+dp[i-1][w-weight[i]];
                 int exlude= dp[i-1][w];
                 dp[i][w]=max(include,exlude);
@@ -35,7 +32,6 @@ int main(){
         }
     }
 
-    // Array to track which items are taken we gave {0,0,0,0}
     int arr[rows];
     for (int k = 0; k < rows; k++) 
     arr[k] = 0;
@@ -46,10 +42,8 @@ int main(){
     // Start backtracking from max capacity
     int j=capacity;
     
-    // Backtrack from the last item and max capacity, e.g., dp[4][5]
     for(int i=rows-1;i>0;i--){
        
-            // Value change means item i was selected: e.g., dp[4][5] != dp[3][5]
             if(dp[i][j] != dp[i-1][j]){
                 arr[i]=1;
                 total_weight=total_weight+weight[i];
@@ -57,7 +51,6 @@ int main(){
                 printf("  Item %d: TAKEN  (weight=%d, value=%d)\n",
                    i, weight[i], value[i]);
 
-                   // Subtract taken item weight from remaining capacity
                    j=j-weight[i];
 
             }
@@ -66,7 +59,6 @@ int main(){
 
     printf("  Total weight   : %d / %d\n", total_weight, capacity);
     printf("  Total profit   : %d\n", total_value);
-    printf("============================================\n");
     
     }
     
