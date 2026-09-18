@@ -18,3 +18,4 @@ AI-Engineering/venv/
 __pycache__/
 .cache/
 *.pyc
+.vscode
