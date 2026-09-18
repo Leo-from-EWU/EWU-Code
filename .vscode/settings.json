@@ -1,0 +1,39 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 1122,
+            "driver": "MySQL",
+            "name": "SQL1212",
+            "database": "mysql",
+            "username": "Sam"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MySQL Local",
+            "username": "root",
+            "database": "mysql",
+            "password": ""
+        }
+    ],
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/C++"
+    ],
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ -I '${workspaceFolder}/C++' $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
+    }
+}

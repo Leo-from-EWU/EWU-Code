@@ -12,3 +12,9 @@
 *.o
 *.exe
 *.dSYM/
+
+# Python / AI-Engineering setup
+AI-Engineering/venv/
+__pycache__/
+.cache/
+*.pyc
