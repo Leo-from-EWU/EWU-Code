@@ -1,23 +1,29 @@
-CREATE DATABASE IF NOT EXISTS data;
-USE data;
+CREATE DATABASE IF NOT EXISTS Leo;
+USE Leo;
 
-CREATE TABLE customer_data(
-    customer_id INT primary key,
-    customer varchar(50),
-    mode varchar(30),
-    city varchar(50)
+CREATE TABLE STUDENT1(
+    Student_id VARCHAR(13), Student_name VARCHAR(20),Student_gender CHAR(1),
+    Student_Credits INT, Student_CGPA INT,STudent_DOB DATE, Student_Phone CHAR(11)
+    
 );
 
-INSERT INTO customer_data VALUES (101,'Olivia','Netbanking','Portland');
-INSERT INTO customer_data VALUES (102,'Ethan','Credit','Miami');
-INSERT INTO customer_data VALUES (103,'Maya','Credit','Seattle');
-INSERT INTO customer_data VALUES (104,'Sopiha','Netbanking','Dhaka');
-INSERT INTO customer_data VALUES (105,'Liam','Credit','England');
-INSERT INTO customer_data VALUES (106,'Sadim','Debit','Noakhali');
-INSERT INTO customer_data VALUES (107,'Ray','Netbanking','Chadpur');
-INSERT INTO customer_data VALUES (108,'Leo','Debit','Dhaka');
+INSERT INTO STUDENT1 VALUES('2024-3-60-347','Alice','F',100,3.5,DATE '2002-04-03',
+'01711990876');
+INSERT INTO STUDENT1 VALUES('2024-3-60-344','Khabir','F',10,1.4,DATE '2006-04-03',
+'01711990876');
+INSERT INTO STUDENT1 VALUES('2024-3-60-098','Mahi','F',200,3.5,DATE '2002-04-03',
+'01711990876');
+INSERT INTO STUDENT1 VALUES('2024-3-60-908','Leo','M',100,3.5,DATE '2002-04-03',
+'01711990876');
 
-SELECT * FROM customer_data;
+SELECT * FROM STUDENT1;
+SELECT * FROM STUDENT1 WHERE Student_gender='F';
 
-SELECT mode, count(customer) FROM customer_data GROUP BY mode;
-drop DATABASE IF EXISTS data;
+
+
+
+SELECT  Student_id FROM STUDENT1 WHERE ID='2024-3-60-347';
+UPDATE STUDENT1 SET Student_CGPA=4.5 WHERE Student_id='2024-3-60-347';
+
+DELETE FROM STUDENT1 WHERE Student_name='Alice';
+DROP TABLE STUDENT1;
