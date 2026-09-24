@@ -30,6 +30,15 @@
             "password": ""
         }
     ],
+
+    // ── SQLTools: Show execution messages instead of blank grid ──
+    "sqltools.results.location": "current",
+    "sqltools.results.limit": 50,
+    "sqltools.showResultOnTab": false,
+    "sqltools.queryParams.enableReplace": true,
+    "sqltools.logging.level": "DEBUG",
+    "sqltools.autoOpenSessionFiles": false,
+
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/C++"
     ],
