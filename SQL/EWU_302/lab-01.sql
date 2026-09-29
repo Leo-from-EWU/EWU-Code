@@ -59,7 +59,8 @@ select name,dept_name from instructor_347 where salary between 80000 and 100000;
 select title,credits from course_347 where dept_name !='Comp.Sci';
 --x
 select * from course_347 where dept_name='Biology' and credits !=4;
-
+-- xi
+SELECT distinct dept_name from course_347;
 
 
 
