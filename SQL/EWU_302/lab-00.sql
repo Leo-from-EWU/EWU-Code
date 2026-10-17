@@ -1,26 +1,21 @@
-CREATE TABLE STUDENT1(
-    Student_id VARCHAR2(13), Student_name VARCHAR(20),Student_gender CHAR(1),
-    Student_Credits NUMBER, Student_CGPA NUMBER,STudent_DOB DATE, Student_Phone CHAR(11)
-    
-);
-
-INSERT INTO STUDENT1 VALUES('2024-3-60-347','Alice','F',100,3.5,DATE '2002-04-03',
-'01711990876');
-INSERT INTO STUDENT1 VALUES('2024-3-60-344','Khabir','F',10,1.4,DATE '2006-04-03',
-'01711990876');
-INSERT INTO STUDENT1 VALUES('2024-3-60-098','Mahi','F',200,3.5,DATE '2002-04-03',
-'01711990876');
-INSERT INTO STUDENT1 VALUES('2024-3-60-908','Leo','M',100,3.5,DATE '2002-04-03',
-'01711990876');
-
-SELECT * FROM STUDENT1;
-SELECT * FROM STUDENT1 WHERE Student_gender='F';
-
-
-
-
-SELECT  Student_id FROM STUDENT1 WHERE ID='2024-3-60-347';
-UPDATE STUDENT1 SET Student_CGPA=4.5 WHERE Student_id='2024-3-60-347';
-
-DELETE FROM STUDENT1 WHERE Student_name='Alice';
-DROP TABLE STUDENT1;
+-- create instructor and courses
+--i.
+select name from instructor_347;
+--ii
+select course_id,title from course_347;
+--iii
+select name,dept_name from instructor_347 where id=22222;
+--iv
+select title,credits from course_347 where dept_name='Comp.Sci';
+-- v
+select name,dept_name from instructor_347 where salary>70000;
+--vi
+select title from course_347 where credits >=4;
+--vii
+select name,dept_name from instructor_347 where salary between 80000 and 100000;
+--viii
+select title,credits from course_347 where dept_name !='Comp.Sci';
+--x
+select * from course_347 where dept_name='Biology' and credits !=4;
+-- xi
+SELECT distinct dept_name from course_347;
